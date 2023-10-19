@@ -101,7 +101,7 @@
     padding-left: 10%;
   }
   .skill{
-    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   /* contact section */
@@ -126,4 +126,23 @@
   }
   .footer-txt{
     padding-top: 20px;
+  }
+
+  /* media query to make about section responsive */
+
+  @media (min-width: 300px) and (max-width: 886px){
+    .about-section-row{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .about, .skills{
+      width: 80vw;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+    .skills{
+      padding-top: 20px;
+    }
   }
