@@ -24,7 +24,7 @@
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 
   <!-- navbar  -->
-  
+
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#carouselExampleCaptions">Code-Hunter</a>
@@ -49,14 +49,91 @@
         </ul>
         <form class="d-flex mt-1">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-danger text-white" type="submit">Search</button>
         </form>
-        
-        <button type="button" class="btn btn-danger mt-1">Sign-In</button>
-        <button type="button" class="btn btn-danger mt-1">Sign-Up</button>
+
+
+        <!-- sign up button with a sign up modal  -->
+
+        <button type="button" class="btn btn-danger mt-1" data-bs-toggle="modal" data-bs-target="#sign-up">
+          Sign-Up
+        </button>
+
+
+        <!-- sign in button with a sign in modal  -->
+
+        <button type="button" class="btn btn-danger mt-1" data-bs-toggle="modal" data-bs-target="#sign-in">Sign-In</button>
+
       </div>
     </div>
   </nav>
+
+  
+        <!--Sign Up Modal -->
+        <div class="modal fade" id="sign-up" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-4"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign-Up Here</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form action="#sign-in">
+              <div class="form-group s-form s-form2">
+                <label for="exampleInputName1">Name</label>
+                <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter Name" required>
+              </div>
+              <div class="form-group s-form">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" required>
+              </div>
+              <div class="form-group s-form">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Create Password" required>
+              </div>
+              <div class="form-group s-form s-form3">
+                <label for="exampleInputPassword1">Confirm Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Type Password Again" required>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-target="#sign-in" data-bs-toggle="modal">Submit</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- sign in Modal -->
+        <div class="modal fade" id="sign-in" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-4"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign-Up Here</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form action="index.html">
+              <div class="form-group s-form s-form2">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" required>
+              </div>
+              <div class="form-group s-form s-form3">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" required>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+
+
+
 
   <!-- carousel  -->
   <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -109,6 +186,7 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
 
   <!-- this is a section include services details  -->
 
@@ -287,58 +365,60 @@
   <!-- contact section ahead -->
 
   <section id="contact">
-  <form action="https://www.linkedin.com/in/codehunterzahid/">
-    <h1 class="text-center">Contact Us</h1>
-    <div class="form">
-      <div class="row">
-    <div class="col">
-      <label for="exampleInputfirstName">First Name</label>
-      <input type="text" class="form-control" placeholder="First name" required>
-    </div>
-    <div class="col">
-      <label for="exampleInputlastName">Last Name</label>
-      <input type="text" class="form-control" placeholder="Last name" required>
-    </div>
-  </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputTel1">Cell No.</label>
-      <input type="tel" class="form-control" id="exampleInputTel1" placeholder="Contact No" required>
-    </div>
+    <form action="https://www.linkedin.com/in/codehunterzahid/">
+      <h1 class="text-center">Contact Us</h1>
+      <div class="form">
+        <div class="row">
+          <div class="col">
+            <label for="exampleInputfirstName">First Name</label>
+            <input type="text" class="form-control" placeholder="First name" required>
+          </div>
+          <div class="col">
+            <label for="exampleInputlastName">Last Name</label>
+            <input type="text" class="form-control" placeholder="Last name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputTel1">Cell No.</label>
+          <input type="tel" class="form-control" id="exampleInputTel1" placeholder="Contact No" required>
+        </div>
 
-      <div class="form-row row">
-        <label for="exampleInputAddress">Address</label>
-        <div class="col-6">
-          <input type="text" class="form-control" placeholder="City" required>
+        <div class="form-row row">
+          <label for="exampleInputAddress">Address</label>
+          <div class="col-6">
+            <input type="text" class="form-control" placeholder="City" required>
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="State" required>
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="Zip" required>
+          </div>
         </div>
-        <div class="col-3">
-          <input type="text" class="form-control" placeholder="State" required>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <div class="col-3">
-          <input type="text" class="form-control" placeholder="Zip" required>
-        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </div>
+    </form>
+  </section>
+  <div class="border"></div>
 
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-  </form>
-</section>
-<div class="border"></div>
-
-<section class="footer">
-  <p class="text-center footer-txt">&copy;All Rights are Reserved</p>
-</section>
+  <section class="footer">
+    <p class="text-center footer-txt">&copy;All Rights are Reserved</p>
+  </section>
 
 
 
+  
 </body>
 
 </html>
